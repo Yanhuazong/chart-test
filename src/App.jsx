@@ -60,7 +60,7 @@ function App() {
             onSelect={() => setSelectedChart("bar")}
             onDownload={(e) => {
               e.stopPropagation();
-              downloadChart(barChartRef, "bar-chart.png");
+              downloadChart(barChartRef, "bar-chart.png", 3);
             }}
           />
           <BarChartViz
@@ -72,7 +72,7 @@ function App() {
             onSelect={() => setSelectedChart("bar")}
             onDownload={(e) => {
               e.stopPropagation();
-              downloadChart(barChartRef, "bar-chart.png");
+              downloadChart(barChartRef, "bar-chart-highlight.png", 3);
             }}
           />
           <HorizontalBarChartViz
@@ -83,7 +83,7 @@ function App() {
             onSelect={() => setSelectedChart("hbar")}
             onDownload={(e) => {
               e.stopPropagation();
-              downloadChart(horizontalRef, "horizontal-bar-chart.png");
+              downloadChart(horizontalRef, "horizontal-bar-chart.png", 3);
             }}
           />
 
@@ -95,7 +95,8 @@ function App() {
             onSelect={() => setSelectedChart("lollipop")}
             onDownload={(e) => {
               e.stopPropagation();
-              downloadChart(lollipopRef, "lollipop-chart.png");
+              // Export at 3x resolution for sharper PNG
+              downloadChart(lollipopRef, "lollipop-chart.png", 3);
             }}
           />
 
